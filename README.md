@@ -1,2 +1,2 @@
-# 666-AESTHETIC
+# AESTHETIC
 aesthetic ✨
