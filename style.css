@@ -1,0 +1,66 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(45deg, #F0F, #0FF, #FF0, #F00);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+.mascot-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.mascot {
+    width: 200px;
+    height: auto;
+    animation: rotate 10s linear infinite;
+}
+
+.content {
+    text-align: center;
+    color: #FFF;
+    animation: contentEntry 3s ease-out;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px #000;
+}
+
+.x-link {
+    color: #FFF;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    animation: linkPulse 2s infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -20px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes contentEntry {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes linkPulse {
+    0%, 100% { background-color: #000; }
+    50% { background-color: #555; }
+}
